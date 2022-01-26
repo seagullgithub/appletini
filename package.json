@@ -1,0 +1,16 @@
+{
+  "name": "appletini",
+  "version": "0.1.0",
+  "description": "css framework (à la tailwindcss) but without the bloated overload",
+  "license": "MIT",
+  "keywords": ["sass framework", "utility classes"],
+  "author": {
+    "url": "https://github.com/seagullgithub"
+  },
+  "repository": "https://github.com/seagullgithub/appletini",
+  "bugs": "https://github.com/seagullgithub/appletini/issues",
+  "style": "appletini.scss",
+  "peerDependencies": {
+    "sass": "^1.0.0"
+  }
+}

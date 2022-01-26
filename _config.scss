@@ -1,0 +1,13 @@
+/* override defaults? */
+@import "defaults";
+// @forward "defaults";
+
+$sizes: (
+"large": 100px
+);
+
+
+.item {
+  // width: defaults.$spam;
+}
+

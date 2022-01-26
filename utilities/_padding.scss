@@ -1,0 +1,15 @@
+/* padding */
+// @import "config";
+// @forward "config";
+
+// padding
+@debug $sizes;
+@each $name, $size in $sizes {
+  p-#{$name} {
+    padding: $size;
+  }
+}
+
+
+
+

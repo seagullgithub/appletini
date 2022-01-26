@@ -1,0 +1,14 @@
+/* appletini */
+// get default values 
+// @import "defaults";
+// override default values
+@import "config";
+
+
+@debug map.merge($sizes-default, $sizes);
+$sizes: map.merge($sizes-default, $sizes);
+
+
+// generate all classes
+@import "padding";
+// ...
