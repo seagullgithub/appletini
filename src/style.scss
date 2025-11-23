@@ -1,14 +1,11 @@
-/* appletini */
-// get default values 
-// @import "defaults";
-// override default values
-@import "config";
+/* appletini entry point */
+@use "sass:map";
+// @use "core/preflight";
+// get variables
+@use "core/defaults";
+@use "config";
+// add utility classes
+@use "utilities/padding";
 
-
-@debug map.merge($sizes-default, $sizes);
-$sizes: map.merge($sizes-default, $sizes);
-
-
-// generate all classes
-@import "padding";
-// ...
+@debug map.merge(defaults.$sizes-default, config.$sizes);
+$sizes: map.merge(defaults.$sizes-default, config.$sizes);

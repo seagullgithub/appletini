@@ -1,13 +1,9 @@
-/* override defaults? */
-@import "defaults";
-// @forward "defaults";
+/* overrides defaults */
+
+@use "core/defaults";
 
 $sizes: (
-"large": 100px
+  "large": 100px,
 );
 
-
-.item {
-  // width: defaults.$spam;
-}
-
+$foo: 42;

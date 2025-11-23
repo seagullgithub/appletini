@@ -3,13 +3,24 @@
   "version": "0.1.0",
   "description": "css framework (à la tailwindcss) but without the bloated overload",
   "license": "MIT",
-  "keywords": ["sass framework", "utility classes"],
+  "keywords": [
+    "sass framework",
+    "utility classes"
+  ],
   "author": {
     "url": "https://github.com/seagullgithub"
   },
   "repository": "https://github.com/seagullgithub/appletini",
   "bugs": "https://github.com/seagullgithub/appletini/issues",
+  "engines": {
+    "node": ">=24.0.0"
+  },
   "style": "appletini.scss",
+  "scripts": {
+    "watch": "node watcher.js",
+    "w": "chokidar 'src/**/*.scss' -c 'npm run build'",
+    "build": "sass --source-map true src/style.scss -o dist/"
+  },
   "peerDependencies": {
     "sass": "^1.0.0"
   }

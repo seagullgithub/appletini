@@ -1,15 +1,9 @@
-/* padding */
-// @import "config";
-// @forward "config";
+/* utility class: padding */
+@use "../core/defaults";
+@use "../config";
 
-// padding
-@debug $sizes;
-@each $name, $size in $sizes {
+@each $name, $size in config.$sizes {
   p-#{$name} {
     padding: $size;
   }
 }
-
-
-
-

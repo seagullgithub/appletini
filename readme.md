@@ -4,52 +4,58 @@ css framework (à la tailwindcss) but without the bloated overload
 
 ## roadmap
 
-* [x] generate utility classes
+* [ ] generate utility classes
 * [ ] shake/purge
 * [ ] autoprefix
 * [ ] minify
 * [ ] create documantion from file
-* [ ] add preflight [from tailwindcss](https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css)
+* [x] add preflight [from tailwindcss](https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css)
 
 
 
 ## what are all those files?
 
-* \_defaults.scss - config file for default variables (widths, colors, ...)used by appletini.scss
-* \_config.scss - config file for custom variables (widths, colors, ...) used by appletini. extend or override default values
-* \_appletini.scss - so to speak the frontend
+```
+C:.
+│   style.scss
+│   _config.scss
+│
+├───core
+│       _defaults.scss
+│       _preflight.scss
+│
+├───helper
+│       create_cheat_sheet.js
+│
+└───utilities
+        _padding.scss
+```
+
+
+* `style.scss` - entry point
+* `_config.scss` - custom variables (overrides default variables)
+* `core/_defaults.scss` - default variables
+* `core/_preflight.scss` - reset and 
+* `helper/create_cheat_sheet.js` - generate html docu/cheat sheet from scss sources (not yet implemented)
+* `utilities/*.scss` - utilities class grouped by category
 
 
 
 ## how to use
 
-1. create \_config.scss 
+### customise `_config.scss` 
 
-and add:
+add variables as needed
 
-```scss
-@import "defaults";
+### add custom classes
 
-$sizes: (
-"large": 100px
-);
-```
+place custom classes either directly in `appletini.scss` or store them in a separat location and add them to  `appletini.scss`
 
 
-2. create style.scss 
+## utility class files
 
-and add the following lines:
-
-```scss
-@import "appletini";
-```
-
-here you can also add your custom styles.
-
-
-## utility files
-
-* \_padding.scss - create paddings
+* _padding.scss - create paddings
+* ...
 
 ## Disclaimer
 
