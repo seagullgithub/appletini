@@ -1,9 +1,53 @@
-/* utility class: padding */
-@use "../core/defaults";
+// utility class: padding
 @use "../config";
 
+// uniform padding - p-{x}
 @each $name, $size in config.$sizes {
   p-#{$name} {
     padding: $size;
+  }
+}
+
+// horizontal padding - px-{x}
+@each $name, $size in config.$sizes {
+  px-#{$name} {
+    padding-left: $size;
+    padding-right: $size;
+  }
+}
+
+// vertical padding - py-{x}
+@each $name, $size in config.$sizes {
+  py-#{$name} {
+    padding-top: $size;
+    padding-bottom: $size;
+  }
+}
+
+// padding top - pt-{x}
+@each $name, $size in config.$sizes {
+  pt-#{$name} {
+    padding-top: $size;
+  }
+}
+
+// padding right - pr-{x}
+@each $name, $size in config.$sizes {
+  pr-#{$name} {
+    padding-right: $size;
+  }
+}
+
+// padding bottom - pb-{x}
+@each $name, $size in config.$sizes {
+  pb-#{$name} {
+    padding-bottom: $size;
+  }
+}
+
+// padding left - pl-{x}
+@each $name, $size in config.$sizes {
+  pl-#{$name} {
+    padding-left: $size;
   }
 }
