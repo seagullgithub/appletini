@@ -1,0 +1,53 @@
+// utility class: margin
+@use "../config";
+
+// uniform margin - m-{x}
+@each $name, $size in config.$sizes {
+  m-#{$name} {
+    margin: $size;
+  }
+}
+
+// horizontal margin - mx-{x}
+@each $name, $size in config.$sizes {
+  mx-#{$name} {
+    margin-left: $size;
+    margin-right: $size;
+  }
+}
+
+// vertical margin - my-{x}
+@each $name, $size in config.$sizes {
+  my-#{$name} {
+    margin-top: $size;
+    margin-bottom: $size;
+  }
+}
+
+// margin top - mt-{x}
+@each $name, $size in config.$sizes {
+  mt-#{$name} {
+    margin-top: $size;
+  }
+}
+
+// margin right - mr-{x}
+@each $name, $size in config.$sizes {
+  mr-#{$name} {
+    margin-right: $size;
+  }
+}
+
+// margin bottom - mb-{x}
+@each $name, $size in config.$sizes {
+  mb-#{$name} {
+    margin-bottom: $size;
+  }
+}
+
+// margin left - ml-{x}
+@each $name, $size in config.$sizes {
+  ml-#{$name} {
+    margin-left: $size;
+  }
+}
