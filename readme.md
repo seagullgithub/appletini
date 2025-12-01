@@ -11,6 +11,10 @@ css framework (à la tailwindcss) but without the bloated overload
 * [ ] create documantion from file
 * [x] add preflight [from tailwindcss](https://github.com/tailwindlabs/tailwindcss/blob/master/src/css/preflight.css)
 
+## start dev
+
+`npm run dev`
+
 
 
 ## what are all those files?
@@ -61,3 +65,32 @@ place custom classes either directly in `appletini.scss` or store them in a sepa
 
 preflight.css is copied from [tailwindcss](https://github.com/tailwindlabs/tailwindcss)
 
+
+
+## helper functions
+
+paste into browser console
+
+```js
+(function() {
+
+  steps = new Set(createSteps(0, 4, 0.5));
+  steps = new Set([...steps, ...createSteps(4, 8, 1)]);
+  steps = new Set([...steps, ...createSteps(8, 100, 4)]);
+  
+  result = "";
+  steps.forEach(item => {
+    result += `"${item.toString().replace(".", "\\\\.")}": ${item * 0.25}rem,`;
+  })
+  
+  copy(result)
+})()
+
+function createSteps(start, end, step) {
+  tmp = []
+  for (i = start; i <= end; i = i + step) {
+    tmp.push(i);
+  }
+  return tmp;
+}
+```

@@ -1,11 +1,8 @@
-/* appletini entry point */
+// appletini entry point
 @use "sass:map";
+// css reset
 // @use "core/preflight";
-// get variables
-@use "core/defaults";
-@use "config";
-// add utility classes
-@use "utilities/padding";
 
-@debug map.merge(defaults.$sizes-default, config.$sizes);
-$sizes: map.merge(defaults.$sizes-default, config.$sizes);
+// add utility classes
+// @use "utilities/padding";
+// @use "utilities/margin";

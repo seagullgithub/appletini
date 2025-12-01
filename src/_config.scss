@@ -1,9 +1,11 @@
-/* overrides defaults */
-
+// overrides defaults
+@use "sass:map";
 @use "core/defaults";
 
 $sizes: (
-  "large": 100px,
+  "large": 10px,
 );
+
+$sizes: map.merge(defaults.$sizes, $sizes);
 
 $foo: 42;
