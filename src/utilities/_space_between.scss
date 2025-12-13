@@ -1,0 +1,15 @@
+@use "../config";
+
+// space x
+@each $name, $size in config.$sizes {
+  .space-x-#{$name} {
+    margin-right: $size;
+  }
+}
+
+// space x
+@each $name, $size in config.$sizes {
+  .space-y-#{$name} {
+    margin-bottom: $size;
+  }
+}
