@@ -3,14 +3,14 @@
 
 // uniform margin - m-{x}
 @each $name, $size in config.$sizes {
-  m-#{$name} {
+  .m-#{$name} {
     margin: $size;
   }
 }
 
 // horizontal margin - mx-{x}
 @each $name, $size in config.$sizes {
-  mx-#{$name} {
+  .mx-#{$name} {
     margin-left: $size;
     margin-right: $size;
   }
@@ -18,7 +18,7 @@
 
 // vertical margin - my-{x}
 @each $name, $size in config.$sizes {
-  my-#{$name} {
+  .my-#{$name} {
     margin-top: $size;
     margin-bottom: $size;
   }
@@ -26,28 +26,28 @@
 
 // margin top - mt-{x}
 @each $name, $size in config.$sizes {
-  mt-#{$name} {
+  .mt-#{$name} {
     margin-top: $size;
   }
 }
 
 // margin right - mr-{x}
 @each $name, $size in config.$sizes {
-  mr-#{$name} {
+  .mr-#{$name} {
     margin-right: $size;
   }
 }
 
 // margin bottom - mb-{x}
 @each $name, $size in config.$sizes {
-  mb-#{$name} {
+  .mb-#{$name} {
     margin-bottom: $size;
   }
 }
 
 // margin left - ml-{x}
 @each $name, $size in config.$sizes {
-  ml-#{$name} {
+  .ml-#{$name} {
     margin-left: $size;
   }
 }
