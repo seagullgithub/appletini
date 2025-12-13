@@ -1,7 +1,10 @@
+/* appletini v0.1.0 */
+
 // appletini entry point
 @use "sass:map";
+
 // css reset
-@use "core/preflight";
+// @use "core/preflight";
 
 // add utility classes
 @use "utilities/padding";
