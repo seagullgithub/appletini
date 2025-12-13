@@ -3,14 +3,14 @@
 
 // uniform padding - p-{x}
 @each $name, $size in config.$sizes {
-  p-#{$name} {
+  .p-#{$name} {
     padding: $size;
   }
 }
 
 // horizontal padding - px-{x}
 @each $name, $size in config.$sizes {
-  px-#{$name} {
+  .px-#{$name} {
     padding-left: $size;
     padding-right: $size;
   }
@@ -18,7 +18,7 @@
 
 // vertical padding - py-{x}
 @each $name, $size in config.$sizes {
-  py-#{$name} {
+  .py-#{$name} {
     padding-top: $size;
     padding-bottom: $size;
   }
@@ -26,28 +26,28 @@
 
 // padding top - pt-{x}
 @each $name, $size in config.$sizes {
-  pt-#{$name} {
+  .pt-#{$name} {
     padding-top: $size;
   }
 }
 
 // padding right - pr-{x}
 @each $name, $size in config.$sizes {
-  pr-#{$name} {
+  .pr-#{$name} {
     padding-right: $size;
   }
 }
 
 // padding bottom - pb-{x}
 @each $name, $size in config.$sizes {
-  pb-#{$name} {
+  .pb-#{$name} {
     padding-bottom: $size;
   }
 }
 
 // padding left - pl-{x}
 @each $name, $size in config.$sizes {
-  pl-#{$name} {
+  .pl-#{$name} {
     padding-left: $size;
   }
 }
