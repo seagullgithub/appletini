@@ -1,8 +1,28 @@
 // appletini entry point
 @use "sass:map";
 // css reset
-// @use "core/preflight";
+@use "core/preflight";
 
 // add utility classes
-// @use "utilities/padding";
-// @use "utilities/margin";
+@use "utilities/padding";
+@use "utilities/margin";
+@use "utilities/columns";
+@use "utilities/box";
+@use "utilities/display";
+@use "utilities/float";
+@use "utilities/clear";
+@use "utilities/overflow";
+@use "utilities/position";
+@use "utilities/visibility";
+@use "utilities/zindex";
+@use "utilities/width";
+@use "utilities/space_between";
+@use "utilities/font_style";
+@use "utilities/list_style_type";
+@use "utilities/text_align";
+@use "utilities/text_decoration";
+@use "utilities/text_transform";
+@use "utilities/text_overflow";
+@use "utilities/cursor";
+@use "utilities/pointer_events";
+@use "utilities/screen_readers";
