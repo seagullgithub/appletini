@@ -1,6 +1,11 @@
 # appletini
 
-css framework (à la tailwindcss) but without the bloated overload
+css utility class framework 
+
+* does not support text directions
+* based on many ideas from tailwind
+
+
 
 ## roadmap
 
