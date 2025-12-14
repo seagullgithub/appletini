@@ -1,7 +1,11 @@
-// utility class: margin
+// utility class: width
+@use "sass:math";
+
+// !!! note: the slash character needs to be escaped
+// html usage `<div class="w-1/2"> ... </div>`
+
 @use "../config";
 
-// uniform margin - m-{x}
 @each $name, $size in config.$sizes {
   .w-#{$name} {
     width: $size;
@@ -23,88 +27,28 @@
 .w-min {
   width: min-content;
 }
+
 .w-max {
   width: max-content;
 }
+
 .w-fit {
   width: fit-content;
 }
 
-.w-1\/2 {
-  width: 50%;
+// columns
+
+@mixin generate($columns) {
+  @for $i from 1 through $columns {
+    .w-#{$i}\/#{$columns} {
+      width: math.div($i * 100%, $columns);
+    }
+  }
 }
-.w-1\/3 {
-  width: 33.333333%;
-}
-.w-2\/3 {
-  width: 66.666667%;
-}
-.w-1\/4 {
-  width: 25%;
-}
-.w-2\/4 {
-  width: 50%;
-}
-.w-3\/4 {
-  width: 75%;
-}
-.w-1\/5 {
-  width: 20%;
-}
-.w-2\/5 {
-  width: 40%;
-}
-.w-3\/5 {
-  width: 60%;
-}
-.w-4\/5 {
-  width: 80%;
-}
-.w-1\/6 {
-  width: 16.666667%;
-}
-.w-2\/6 {
-  width: 33.333333%;
-}
-.w-3\/6 {
-  width: 50%;
-}
-.w-4\/6 {
-  width: 66.666667%;
-}
-.w-5\/6 {
-  width: 83.333333%;
-}
-.w-1\/12 {
-  width: 8.333333%;
-}
-.w-2\/12 {
-  width: 16.666667%;
-}
-.w-3\/12 {
-  width: 25%;
-}
-.w-4\/12 {
-  width: 33.333333%;
-}
-.w-5\/12 {
-  width: 41.666667%;
-}
-.w-6\/12 {
-  width: 50%;
-}
-.w-7\/12 {
-  width: 58.333333%;
-}
-.w-8\/12 {
-  width: 66.666667%;
-}
-.w-9\/12 {
-  width: 75%;
-}
-.w-10\/12 {
-  width: 83.333333%;
-}
-.w-11\/12 {
-  width: 91.666667%;
-}
+
+@include generate(2);
+@include generate(3);
+@include generate(4);
+@include generate(5);
+@include generate(6);
+@include generate(12);

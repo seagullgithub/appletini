@@ -21,9 +21,14 @@
     "dev": "node watcher.js",
     "build": "npm run buildDefault && npm run buildCompressed",
     "buildDefault": "sass --source-map src/style.scss dst/appletini.css",
-    "buildCompressed": "sass --source-map --style=compressed src/style.scss dst/appletini.min.css"
+    "buildCompressed": "sass --source-map --style=compressed src/style.scss dst/appletini.min.css",
+    "lint": "stylelint src/**/*.scss"
   },
   "peerDependencies": {
     "sass": "^1.0.0"
+  },
+  "devDependencies": {
+    "stylelint": "^16.26.1",
+    "stylelint-config-standard-scss": "^16.0.0"
   }
 }

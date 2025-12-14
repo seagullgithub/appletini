@@ -5,7 +5,6 @@
 $sizes: (
   "large": 10px,
 );
-
 $sizes: map.merge(defaults.$sizes, $sizes);
 
-$foo: 42;
+// $foo: 42;
