@@ -19,8 +19,9 @@
   "style": "appletini.scss",
   "scripts": {
     "dev": "node watcher.js",
-    "w": "chokidar 'src/**/*.scss' -c 'npm run build'",
-    "build": "sass --source-map true src/style.scss -o dist/"
+    "build": "npm run buildDefault && npm run buildCompressed",
+    "buildDefault": "sass --source-map src/style.scss dst/appletini.css",
+    "buildCompressed": "sass --source-map --style=compressed src/style.scss dst/appletini.min.css"
   },
   "peerDependencies": {
     "sass": "^1.0.0"
